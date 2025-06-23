@@ -1,0 +1,47 @@
+{
+    "name": "fauzi-dhuhuri/simple-cart",
+    "description": "CRUD A Simple Cart",
+    "type": "library",
+    "require": {
+        "illuminate/support": "^12.0",
+        "illuminate/database": "^12.0",
+        "illuminate/session": "^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0",
+        "mockery/mockery": "^1.6",
+        "pestphp/pest": "^3.8",
+        "pestphp/pest-plugin-laravel": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "FauziDhuhuri\\SimpleCart\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Muhammad Fauzi Dhuhuri",
+            "email": "fazuhuri@gmail.com"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FauziDhuhuri\\SimpleCart\\CartServiceProvider"
+            ],
+            "aliases": {
+                "Cart": "FauziDhuhuri\\SimpleCart\\Facades\\Cart"
+            }
+        }
+    }
+}
